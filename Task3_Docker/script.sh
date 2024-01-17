@@ -2,22 +2,19 @@
 sudo apt-get install python3
 sudo pip install git
 
-git clone 
+#Create dockerfile
+touch dockerfile
+echo "FROM httpd:2.4" >> dockerfile
+echo "COPY files/index.html /usr/local/apache2/htdocs/" >> dockerfile
 
-cd Docker
-make docker file
-echo "Building docker File..."
-rm Dockerfile
-touch Dockerfile
-echo "FROM httpd:2.4" >> Dockerfile
-echo "COPY files/index.html /usr/local/apache2/htdocs/" >> Dockerfile
-echo "COPY files/script.js /usr/local/apache2/htdocs/" >> Dockerfile
-build + run container
-echo "Dockerfile made."
+#build and run the container
+echo "dockerfile has been built"
 docker pull httpd
-docker build -t dockerimagetomswalens .
-docker run -dit --name containertomswalens -p 8088:80 dockerimagetomswalens
+docker build -t dockerimagevitaltyrsu .
+docker run -dit --name containervitaltyrsu -p 8080:80 dockerimagevitaltyrsu
 
-sleep for 5 sec and verify
-sleep 5
-curl localhost:8088
+#sleep for 7 sec to let build the container
+sleep 7
+curl localhost:8080
+
+#VitalTyrsu
