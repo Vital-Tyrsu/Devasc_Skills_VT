@@ -1,0 +1,12 @@
+Today's date: 2024-01-23
+START REST API CALL
+============
+FIRST API CALL
+============
+Status Code: 000
+============
+SECOND API CALL
+============
+Status Code: 000
+Interfaces: (realtime output)
+END REST API CALL
